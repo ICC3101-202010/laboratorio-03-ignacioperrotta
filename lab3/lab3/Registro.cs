@@ -9,21 +9,26 @@ namespace lab3
     {
         private string fecha;
         private string hora;
-        private List<Producto> Carro = new List<Producto>();
-        
-        public void VerCarro()
-        {
-            for (int i = 0; i < Carro.Count; i++)
-            {
-                Console.WriteLine(Carro[i]);
-            }
-        }
-        public Registro(string fecha, string hora, List<Producto> Carro)
+        private List<Producto> Comprado = new List<Producto>();
+
+
+        public Registro(string fecha, string hora, List<Producto> Comprado)
         {
             this.fecha = fecha;
             this.hora = hora;
-            this.Carro = Carro;
+            this.Comprado = Comprado;
         }
+        public void VerComprados()
+        {
+            for (int i = 0; i < Comprado.Count; i++)
+            {
+                Console.WriteLine(Comprado[i]);
+            }
+        }
+       
+        
+
+        
 
     }
 }

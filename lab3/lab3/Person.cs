@@ -88,7 +88,7 @@ namespace lab3
                 genero = value;
             }
         }
-
+        
       
     }
 }

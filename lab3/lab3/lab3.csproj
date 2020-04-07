@@ -41,6 +41,7 @@
     <Compile Include="Assistants.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Registro.cs" />
+    <Compile Include="Cajeros.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

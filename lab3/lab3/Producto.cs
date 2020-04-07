@@ -8,9 +8,9 @@ namespace lab3
     public class Producto
     {
         protected string nombre;
-        protected int precio;
+        public int precio;
         protected string marca;
-        protected int stock;
+        public int stock;
         
         public Producto(string nombre, int precio, string marca, int stock)
         {
@@ -26,7 +26,10 @@ namespace lab3
             return "nombre: " + nombre + ", precio: " + precio + ", marca: " + marca + ", stock: " + stock;
         }
       
-
+        public string informacion_registro()
+        {
+            return nombre + ", $" + precio;
+        }
 
 
         

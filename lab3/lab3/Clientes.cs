@@ -19,6 +19,14 @@ namespace lab3
 
 
         }
+        public string Info_Cliente()
+        {
+            return "Rut:" + this.Rut + ", Nombre:" + this.Nombre + ", Apellido:" + this.Apellido + ", Fecha de nacimiento:" + this.Fecha_Nacimiento + ", Nacionalidad:" + this.Nacionalidad + ", Genero:" + this.Genero;
+        }
+
+        
+      
+        
 
     }
 }
