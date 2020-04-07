@@ -58,7 +58,7 @@ namespace lab3
                     string n_horario_de_trabajo;
                     n_horario_de_trabajo = Console.ReadLine();
                     usuario.CrearEmpleado(n_rut, n_nombre, n_apellido, n_fecha_de_nacimiento, n_nacionalidad, n_genero, n_horario_de_trabajo, n_sueldo_del_empleado, n_puesto_de_trabajo);
-                    Console.WriteLine("Empleado ha sido creado");
+                    
 
                 }
                 else if (input_usuario == "2")
@@ -86,7 +86,7 @@ namespace lab3
                     string n_nacionalidad;
                     n_nacionalidad = Console.ReadLine();
                     usuario.CrearCliente(n_rut, n_nombre, n_apellido, n_fecha_de_nacimiento, n_nacionalidad, n_genero);
-                    Console.WriteLine("Cliente ha sido creado");
+                    
                 }
                 else if (input_usuario == "4")
                 {

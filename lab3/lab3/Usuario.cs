@@ -31,53 +31,78 @@ namespace lab3
             if (puesto_de_trabajo == "jefe")
             {
                 Bosses boss = new Bosses(rut, nombre, apellido, fecha_nacimiento, nacionalidad, genero, horario_de_trabajo, sueldo);
-                if (bosses.Contains(boss))
+                for (int i = 0; i < bosses.Count; i++)
                 {
-                    Console.WriteLine("No se puede crear este trabajador, debido a que ya existe");
-                    return false;
+                    if (boss.Ver_Empleado() == bosses[i].Ver_Empleado())
+                    {
+                        Console.WriteLine("Este empleado ya existe");
+                        return false;
+                    }
+                    else
+                    {
+                        continue;
+                    }
                 }
-               
-              
                 bosses.Add(boss);
+                Console.WriteLine("Empleado ha sido creado");
                 return true;
+               
             }
             else if (puesto_de_trabajo == "auxiliar")
             {
                 Assistants assistant = new Assistants(rut, nombre, apellido, fecha_nacimiento, nacionalidad, genero, horario_de_trabajo, sueldo);
-                if (assistants.Contains(assistant))
+                for (int i = 0; i < assistants.Count; i++)
                 {
-                    Console.WriteLine("No se puede crear este trabajador, debido a que ya existe");
-                    return false;
+                    if (assistant.Ver_Empleado() == assistants[i].Ver_Empleado())
+                    {
+                        Console.WriteLine("Este empleado ya existe");
+                        return false;
+                    }
+                    else
+                    {
+                        continue;
+                    }
                 }
-
-
                 assistants.Add(assistant);
+                Console.WriteLine("Empleado ha sido creado");
                 return true;
             }
             if (puesto_de_trabajo == "supervisor")
             {
                 Supervisors supervisor = new Supervisors(rut, nombre, apellido, fecha_nacimiento, nacionalidad, genero, horario_de_trabajo, sueldo);
-                if (supervisors.Contains(supervisor))
+                for (int i = 0; i < supervisors.Count; i++)
                 {
-                    Console.WriteLine("No se puede crear este trabajador, debido a que ya existe");
-                    return false;
+                    if (supervisor.Ver_Empleado() == supervisors[i].Ver_Empleado())
+                    {
+                        Console.WriteLine("Este empleado ya existe");
+                        return false;
+                    }
+                    else
+                    {
+                        continue;
+                    }
                 }
-
-
                 supervisors.Add(supervisor);
+                Console.WriteLine("Empleado ha sido creado");
                 return true;
             }
             else if (puesto_de_trabajo == "cajero")
             {
                 Cajeros cajero = new Cajeros(rut, nombre, apellido, fecha_nacimiento, nacionalidad, genero, horario_de_trabajo, sueldo);
-                if (cajeros.Contains(cajero))
+                for (int i = 0; i < cajeros.Count; i++)
                 {
-                    Console.WriteLine("No se puede crear este trabajador, debido a que ya existe");
-                    return false;
+                    if (cajero.Ver_Empleado() == cajeros[i].Ver_Empleado())
+                    {
+                        Console.WriteLine("Este empleado ya existe");
+                        return false;
+                    }
+                    else
+                    {
+                        continue;
+                    }
                 }
-
-
                 cajeros.Add(cajero);
+                Console.WriteLine("Empleado ha sido creado");
                 return true;
             }
 
@@ -191,20 +216,24 @@ namespace lab3
 
             }
         }
-            public bool CrearProducto(string nombre, int precio, string marca, int stock)
+        public bool CrearProducto(string nombre, int precio, string marca, int stock)
         {
             Producto producto = new Producto(nombre, precio, marca, stock);
-            if (products.Contains(producto))
+            for (int i = 0; i < products.Count; i++)
             {
-                return false;
+                if (producto.informacion() == products[i].informacion())
+                {
+                    Console.WriteLine("Este producto ya existe");
+                    return false;
+                }
+                else
+                {
+                    continue;
+                }
             }
-            else
-            {
-                products.Add(producto);
-                return true;
-            }
-
-
+            products.Add(producto);
+            Console.WriteLine("Se ha creado el producto");
+            return true;
         }
         public void Ver_Trabajadores()
         {
@@ -244,15 +273,23 @@ namespace lab3
         public bool CrearCliente(string rut, string nombre, string apellido, string fecha_nacimiento, string nacionalidad, string genero)
         {
             Clientes nuevo_cliente = new Clientes(rut, nombre, apellido, fecha_nacimiento, nacionalidad, genero);
-            if (clientes.Contains(nuevo_cliente))
+            for (int i = 0; i < clientes.Count; i++)
             {
-                Console.WriteLine("No se puede crear este cliente, debido a que ya existe");
-                return false;
+                if (nuevo_cliente.Info_Cliente() == clientes[i].Info_Cliente())
+                {
+                    Console.WriteLine("Este cliente ya existe");
+                    return false;
+                }
+                else
+                {
+                    continue;
+                }
             }
-
-
             clientes.Add(nuevo_cliente);
+            Console.WriteLine("Se ha creado el cliente");
             return true;
+
+
         }
         public void Ver_Cajeros()
         {
